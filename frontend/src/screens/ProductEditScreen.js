@@ -137,7 +137,6 @@ const ProductEditScreen = ({ match, history }) => {
               <Form.Control
                 type='file'
                 label='Choose File'
-                custom
                 onChange={uploadFileHandler}
               ></Form.Control>
               {uploading && <Loader />}
