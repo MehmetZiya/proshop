@@ -19,6 +19,16 @@ h2 {
 .rating span {
   margin: 0.1rem;
 }
+.cardStyle {
+  max-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageStyle {
+  max-height: 150px;
+  width: auto;
+}
 
 /* carousel */
 .carousel-item-next,
@@ -36,10 +46,11 @@ h2 {
 }
 
 .carousel img {
-  height: 300px;
-  padding: 30px;
+  max-height: 300px !important;
+  width: auto !important;
+  padding: 50px;
   margin: 40px;
-  border-radius: 50%;
+  border-radius: 30%;
   margin-left: auto;
   margin-right: auto;
 }
