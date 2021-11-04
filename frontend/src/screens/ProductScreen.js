@@ -36,10 +36,12 @@ const ProductScreen = ({ history, match }) => {
     if (successProductReview) {
       setRating(0)
       setComment('')
+    }
+    if (!product._id || product._id !== match.params.id) {
       dispatch(listProductDetails(match.params.id))
       dispatch({ type: PRODUCT_CREATE_REVIEW_RESET })
     }
-  }, [dispatch, match, successProductReview])
+  }, [dispatch, match, product._id, successProductReview])
 
   const addToCartHandler = () => {
     history.push(`/cart/${match.params.id}?qty=${qty}`)
@@ -206,7 +208,7 @@ const ProductScreen = ({ history, match }) => {
                     </Form>
                   ) : (
                     <Message>
-                      Please <Link to='/login'>sign in</Link> to write a review{' '}
+                      Please <Link to='/login'>Sign in</Link> to write a review{' '}
                     </Message>
                   )}
                 </ListGroup.Item>
